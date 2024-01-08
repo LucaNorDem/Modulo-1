@@ -69,8 +69,8 @@ var alumno = {
 };
 
 function getNombre() {
-  return this.nombre;}
-
+  return this.nombre;
+}
 /*
   Ejercicio 3
   IMPORTANTE: no modificar el código de arriba (variables instructor y alumno, y función getNombre)
