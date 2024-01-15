@@ -30,7 +30,7 @@ describe("getRowNumber", ()=>{
     })
 })
 
-describe.only("book", ()=>{
+describe("book", ()=>{
     it("Should return -Seat in E3 successfully booked- if the givin seat is not booked", ()=>{
         expect(checkSeatStatus("E",3)).toBe(false);
         expect(book("E", 3)).toBe("Seat in E3 succesfully booked");
