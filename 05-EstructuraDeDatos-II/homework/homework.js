@@ -71,12 +71,16 @@ LinkedList.prototype.search = function (search) {
 
   if(current.value === search) value = current.value;
 
-  while(current.next){   
+  while(current){   
+    if(typeof search === "function" && search(current.value)) return current.value;
+
+    if(current.value === search) return search;
+
     current = current.next;
-    if (current.value === search) value = current.value;
+    
   }
 
-  return value;
+  return null;
 
 }
 
