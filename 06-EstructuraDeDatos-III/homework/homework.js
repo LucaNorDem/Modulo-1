@@ -17,19 +17,19 @@ function BinarySearchTree(value) {
 }
 
 BinarySearchTree.prototype.insert = function (value){
-   var newBST = new BinarySearchTree(value);
+   // var newBST = new BinarySearchTree(value);
 
    if(value < this.value){
       if(this.left){
          this.left.insert(value);
       }else{
-         this.left = newBST;
+         this.left = new BinarySearchTree(value);
       }
    }else{
       if(this.right){
          this.right.insert(value);
       }else{
-         this.right = newBST;
+         this.right = new BinarySearchTree(value);
       }
    }
 }
